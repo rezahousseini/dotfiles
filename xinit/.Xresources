@@ -1,0 +1,12 @@
+Xft*antialias:          true
+Xft*autohint:           true
+XTerm*background:   black
+XTerm*foreground:   white
+XTerm*cursorColor:  grey
+XTerm*scrollBar:    true
+XTerm*rightScrollBar:   true
+XTerm*saveLines:    10000
+XTerm*renderFont: true
+XTerm*faceName:     DejaVu
+XTerm*faceSize:     12
+XTerm*toolBar:      off
