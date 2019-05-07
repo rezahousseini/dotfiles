@@ -33,8 +33,6 @@
         #sslCAinfo = /usr/ssl/certs/git.mecos.com.cer
         #sslCAinfo = /usr/ssl/certs/ca-bundle.crt
         #sslCApath = /usr/ssl/certs/
-[http]
-        #sslCAinfo = /usr/ssl/certs/ca-bundle.crt
         sslCAinfo = /etc/ssl/certs/ca-bundle.crt
 [credential]
 	helper = cache
