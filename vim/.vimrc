@@ -106,8 +106,18 @@ augroup filetypedetect
 augroup END 
 
 " Mark column 80
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%81v.\+/
+"highlight ColorColumn ctermbg=gray
+"set colorcolumn=80
+augroup collumnLimit
+  autocmd!
+  autocmd BufEnter,WinEnter,FileType cpp,c,python
+        \ highlight CollumnLimit ctermbg=DarkGrey guibg=DarkGrey
+  let collumnLimit = 79 " feel free to customize
+  let pattern =
+        \ '\%<' . (collumnLimit+1) . 'v.\%>' . collumnLimit . 'v'
+  autocmd BufEnter,WinEnter,FileType cpp,c,python
+        \ let w:m1=matchadd('CollumnLimit', pattern, -1)
+augroup END
 
 " Ignore whitespace in vimdiff
 "if &diff
