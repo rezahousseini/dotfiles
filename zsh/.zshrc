@@ -66,8 +66,11 @@ ZSH_TMUX_AUTOSTART=true
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
+  poetry
   tmux
   z
+  zsh-autosuggestions
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -99,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 export DISPLAY=:0.0
+
+# activate virtualenv with poetry shell command
+alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
