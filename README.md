@@ -11,6 +11,14 @@ Activate oh-my-zsh
 Clone the repository
 
     git clone https://github.com/rezahousseini/dotfiles.git ~/.dotfiles
+    
+Change directory
+
+    cd ~/.dotfiles
+    
+Remove or move any existing files
+
+    rm ~/.zshrc
 
 # dotfiles
 
