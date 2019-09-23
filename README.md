@@ -10,7 +10,7 @@ Activate oh-my-zsh
     
 Clone the repository
 
-    git clone ~/.dotfiles
+    git clone https://github.com/rezahousseini/dotfiles.git ~/.dotfiles
 
 # dotfiles
 
