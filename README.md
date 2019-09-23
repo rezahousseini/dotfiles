@@ -2,7 +2,7 @@
 
 Install dependencies
 
-    sudo apt install git curl zsh stow tmux
+    sudo apt install git curl zsh stow tmux fonts-powerline
     
 Activate oh-my-zsh
 
