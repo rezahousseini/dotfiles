@@ -2,7 +2,7 @@
 
 Install dependencies
 
-    sudo apt install git curl zsh stow
+    sudo apt install git curl zsh stow tmux
     
 Activate oh-my-zsh
 
