@@ -1,3 +1,17 @@
+# preparation
+
+Install dependencies
+
+    sudo apt install git curl zsh stow
+    
+Activate oh-my-zsh
+
+    sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    
+Clone the repository
+
+    git clone ~/.dotfiles
+
 # dotfiles
 
 Setup the dotfiles by calling
