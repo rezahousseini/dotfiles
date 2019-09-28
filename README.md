@@ -2,7 +2,7 @@
 
 Install dependencies
 
-    sudo apt install git curl zsh stow
+    sudo apt install git curl zsh stow tmux fonts-powerline
     
 Activate oh-my-zsh
 
@@ -11,6 +11,14 @@ Activate oh-my-zsh
 Clone the repository
 
     git clone https://github.com/rezahousseini/dotfiles.git ~/.dotfiles
+    
+Change directory
+
+    cd ~/.dotfiles
+    
+Remove or move any existing files
+
+    rm ~/.zshrc
 
 # dotfiles
 
