@@ -8,6 +8,10 @@ Activate oh-my-zsh
 
     sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     
+Install the vim plugin manager
+
+    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    
 Clone the repository
 
     git clone https://github.com/rezahousseini/dotfiles.git ~/.dotfiles
