@@ -2,7 +2,7 @@
 
 Install dependencies
 
-    sudo apt install git curl zsh stow tmux fonts-powerline
+    sudo apt install git curl zsh stow tmux fonts-powerline neovim
     
 Activate oh-my-zsh
 
