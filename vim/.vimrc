@@ -55,7 +55,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this lineset backspace=indent,eol,start
 
-set backup
 set history=50
 set ruler
 set background=dark
@@ -82,8 +81,7 @@ if has("autocmd")
   " ...
 endif
 
-set backupdir=~/.vim/tmp,.
-set directory=~/.vim/tmp,.
+set directory=~/.vim/swap//,.
 
 set fileformats=unix,dos
 set fileformat=unix
@@ -147,3 +145,7 @@ set t_Co=256
 
 "YouCompleteMe configuration
 let g:ycm_global_ycm_extra_conf = '${HOME}/.vim/.ycm_extra_conf.py'
+
+" Move backups to separate directory
+set backup
+set backupdir=~/.vim/backup//,.

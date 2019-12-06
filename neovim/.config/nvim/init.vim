@@ -75,3 +75,10 @@ let g:airline_powerline_fonts = 1
 " Toggle through files
 nnoremap <F8> :bn<CR>
 nnoremap <F7> :bp<CR>
+
+" Move backups to separate directory
+set backup
+set backupdir=~/.vim/backup//,.
+
+" Move swap files to separate directory
+set directory=~/.vim/swap//,.
