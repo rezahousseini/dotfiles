@@ -89,10 +89,13 @@ set backupdir=~/.vim/backup//,.
 " Move swap files to separate directory
 set directory=~/.vim/swap//,.
 
-" NERDTree config
-autocmd vimenter * NERDTree
-
 " Afterglow color scheme config
 colorscheme afterglow
 let g:afterglow_inherit_background=1
 let g:afterglow_italic_comments=1
+
+" Toggle tagbar
+nmap <F4> :TagbarToggle<CR>
+
+" Toggle NERDTree
+nmap <F3> :NERDTreeToggle<CR>
