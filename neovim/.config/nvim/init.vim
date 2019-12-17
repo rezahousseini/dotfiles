@@ -26,6 +26,12 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Color scheme
+Plug 'danilo-augusto/vim-afterglow'
+
+" Tagbar
+Plug 'majutsushi/tagbar'
+
 call plug#end()
 
 "Completion
@@ -82,3 +88,11 @@ set backupdir=~/.vim/backup//,.
 
 " Move swap files to separate directory
 set directory=~/.vim/swap//,.
+
+" NERDTree config
+autocmd vimenter * NERDTree
+
+" Afterglow color scheme config
+colorscheme afterglow
+let g:afterglow_inherit_background=1
+let g:afterglow_italic_comments=1
