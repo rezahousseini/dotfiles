@@ -8,7 +8,8 @@ export ZSH=$HOME/.oh-my-zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="suvash"
+#"robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -105,3 +106,5 @@ export DISPLAY=:0.0
 
 # activate virtualenv with poetry shell command
 alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
+
+export PATH=$HOME/.poetry/bin:$PATH
