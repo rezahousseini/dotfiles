@@ -78,7 +78,7 @@ let g:airline#extensions#branch#enabled = 1
 let g:airline_theme = 'powerlineish'
 let g:airline_powerline_fonts = 1
 
-" Toggle through files
+" Toggle through files with F7 and F8 keys
 nnoremap <F8> :bn<CR>
 nnoremap <F7> :bp<CR>
 
