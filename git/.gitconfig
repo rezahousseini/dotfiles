@@ -1,9 +1,9 @@
 [alias]
-        tree = "forest -n 100 --all --date=iso --pretty=format:\"%C(red)%h %C(magenta)(%ad) %C(dim white)%an %C(reset)%s\" --style=10 --reverse"
-        tree2 = "forest -n 100 --date=iso --pretty=format:\"%C(red)%h %C(magenta)(%ad) %C(dim white)%an %C(reset)%s\" --style=10 --reverse"
-        tree3 = "log --graph --all --pretty=format:\"%C(magenta)%d %C(red)%h %C(yellow)(%ar) %C(dim white)%an %n %C(reset) %<(80,trunc)%s\""
-        tree4 = "log --pretty=oneline --decorate --graph --abbrev-commit --all"
-        diffno = "!f() { git diff-tree --no-commit-id --name-only -r HEAD~$1; }; f"
+  tree = "forest -n 100 --all --date=iso --pretty=format:\"%C(red)%h %C(magenta)(%ad) %C(dim white)%an %C(reset)%s\" --style=10 --reverse"
+  tree2 = "forest -n 100 --date=iso --pretty=format:\"%C(red)%h %C(magenta)(%ad) %C(dim white)%an %C(reset)%s\" --style=10 --reverse"
+  tree3 = "log --graph --all --pretty=format:\"%C(magenta)%d %C(red)%h %C(yellow)(%ar) %C(dim white)%an %n %C(reset) %<(80,trunc)%s\""
+  tree4 = "log --pretty=oneline --decorate --graph --abbrev-commit --all"
+  diffno = "!f() { git diff-tree --no-commit-id --name-only -r HEAD~$1; }; f"
 	rescue = !git fsck --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline
 [user]
 	email = reza.housseini@mecos.com
@@ -23,8 +23,9 @@
         autocrlf = true
 [core "https://bitbucket.sdc.aws.md-man.biz"]
         autocrlf = true
-[mergetool]
-	prompt = false
+[mergetool "vimdiff"]
+  cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
+  #prompt = false
 [gc]
 	auto = 256
 [push]
