@@ -108,3 +108,11 @@ export DISPLAY=:0.0
 alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
 
 export PATH=$HOME/.poetry/bin:$PATH
+
+# Add meson binary to path
+export PATH="$HOME/.local/bin:$PATH"
+
+# Add id_rsa_mecos key to key chain
+if (( $+commands[keychain] )) then
+  eval $(keychain --eval id_rsa_mecos)
+fi
