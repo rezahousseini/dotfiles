@@ -4,36 +4,36 @@
   tree3 = "log --graph --all --pretty=format:\"%C(magenta)%d %C(red)%h %C(yellow)(%ar) %C(dim white)%an %n %C(reset) %<(80,trunc)%s\""
   tree4 = "log --pretty=oneline --decorate --graph --abbrev-commit --all"
   diffno = "!f() { git diff-tree --no-commit-id --name-only -r HEAD~$1; }; f"
-	rescue = !git fsck --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline
+  rescue = !git fsck --unreachable --lost-found | grep commit | cut -d\\  -f3 | xargs -n 1 git log -n 1 --pretty=oneline
 [user]
-	email = reza.housseini@mecos.com
-	name = Reza Housseini
+  email = reza.housseini@mecos.com
+  name = Reza Housseini
 [diff]
-	tool = vimdiff
+  tool = vimdiff
 [merge]
-	tool = vimdiff
-	conflictstyle = diff3
+  tool = vimdiff
+  conflictstyle = diff3
 [core]
-	autocrlf = input
-	editor = vim
-	preloadindex = true
-	fscache = true
-	filemode = false
+  autocrlf = input
+  editor = nvim
+  preloadindex = true
+  fscache = true
+  filemode = false
 [core "https://git.md-man.biz"]
-        autocrlf = true
+  autocrlf = true
 [core "https://bitbucket.sdc.aws.md-man.biz"]
-        autocrlf = true
+  autocrlf = true
 [mergetool "vimdiff"]
   cmd = nvim -d $LOCAL $REMOTE $MERGED -c '$wincmd w' -c 'wincmd J'
   #prompt = false
 [gc]
-	auto = 256
+  auto = 256
 [push]
-	default = simple
+  default = simple
 [http]
-        #sslCAinfo = /usr/ssl/certs/git.mecos.com.cer
-        #sslCAinfo = /usr/ssl/certs/ca-bundle.crt
-        #sslCApath = /usr/ssl/certs/
-        #sslCAinfo = /etc/ssl/certs/ca-bundle.crt
+  #sslCAinfo = /usr/ssl/certs/git.mecos.com.cer
+  #sslCAinfo = /usr/ssl/certs/ca-bundle.crt
+  #sslCApath = /usr/ssl/certs/
+  #sslCAinfo = /etc/ssl/certs/ca-bundle.crt
 [credential]
-	helper = cache
+  helper = cache
