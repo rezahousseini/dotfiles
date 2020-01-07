@@ -2,6 +2,7 @@ call plug#begin()
 
 " NERDTree
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
 " Git integration
 Plug 'tpope/vim-fugitive'
@@ -28,9 +29,13 @@ Plug 'vim-airline/vim-airline-themes'
 
 " Color scheme
 Plug 'danilo-augusto/vim-afterglow'
+Plug 'endel/vim-github-colorscheme'
 
 " Tagbar
 Plug 'majutsushi/tagbar'
+
+" Meson plugin
+Plug 'igankevich/mesonic'
 
 call plug#end()
 
@@ -99,3 +104,10 @@ nmap <F4> :TagbarToggle<CR>
 
 " Toggle NERDTree
 nmap <F3> :NERDTreeToggle<CR>
+
+" Change vimdiff colorscheme
+if &diff
+  colorscheme github
+  "colorscheme molokai
+  "colorscheme evening
+endif
