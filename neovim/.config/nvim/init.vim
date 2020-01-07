@@ -111,3 +111,7 @@ if &diff
   "colorscheme molokai
   "colorscheme evening
 endif
+
+"Show line endings
+set listchars=eol:¶
+set list
