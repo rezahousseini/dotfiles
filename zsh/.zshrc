@@ -72,6 +72,9 @@ plugins=(
   z
   zsh-autosuggestions
   zsh-syntax-highlighting
+  colored-man-pages
+  gitignore
+  git-prompt
 )
 
 source $ZSH/oh-my-zsh.sh
