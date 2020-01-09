@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline-themes'
 " Color scheme
 Plug 'danilo-augusto/vim-afterglow'
 Plug 'endel/vim-github-colorscheme'
+Plug 'altercation/vim-colors-solarized'
 
 " Tagbar
 Plug 'majutsushi/tagbar'
@@ -95,7 +96,8 @@ set backupdir=~/.vim/backup//,.
 set directory=~/.vim/swap//,.
 
 " Afterglow color scheme config
-colorscheme afterglow
+set background=dark
+colorscheme solarized
 let g:afterglow_inherit_background=1
 let g:afterglow_italic_comments=1
 
