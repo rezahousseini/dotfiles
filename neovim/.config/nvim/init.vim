@@ -73,6 +73,9 @@ set ignorecase
 set smartcase
 set diffopt +=iwhite
 
+"System clipboard support
+set clipboard+=unnamedplus
+
 " Neomake config
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing).
@@ -95,11 +98,10 @@ set backupdir=~/.vim/backup//,.
 " Move swap files to separate directory
 set directory=~/.vim/swap//,.
 
-" Afterglow color scheme config
+" Color scheme config
+let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
-let g:afterglow_inherit_background=1
-let g:afterglow_italic_comments=1
 
 " Toggle tagbar
 nmap <F4> :TagbarToggle<CR>
