@@ -60,6 +60,9 @@ COMPLETION_WAITING_DOTS="true"
 
 ZSH_TMUX_AUTOSTART=true
 
+# Add meson and powerline binary to path
+export PATH="$HOME/.local/bin:$PATH"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -105,15 +108,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export DISPLAY=:0.0
+#export DISPLAY=:0.0
 
 # activate virtualenv with poetry shell command
 alias poetry_shell='. "$(dirname $(poetry run which python))/activate"'
 
 export PATH=$HOME/.poetry/bin:$PATH
-
-# Add meson binary to path
-export PATH="$HOME/.local/bin:$PATH"
 
 # Add id_rsa_mecos key to key chain
 if (( $+commands[keychain] )) then
