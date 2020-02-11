@@ -38,6 +38,20 @@ Plug 'majutsushi/tagbar'
 " Meson plugin
 Plug 'igankevich/mesonic'
 
+" Line indent
+"Plug 'Yggdroot/indentLine'
+
+" Tex plugins
+Plug 'lervag/vimtex'
+Plug 'Konfekt/FastFold'
+"Plug 'matze/vim-tex-fold'
+
+" Easy motion
+Plug 'easymotion/vim-easymotion'
+
+" YouCompleteMe
+Plug 'ycm-core/YouCompleteMe'
+
 call plug#end()
 
 "Completion
@@ -54,6 +68,7 @@ set ruler
 set wildmenu
 set mouse-=a
 set t_Co=256
+set showcmd
 
 "Code folding
 set foldmethod=manual
@@ -117,5 +132,30 @@ if &diff
 endif
 
 "Show line endings
-set listchars=eol:¶
-set list
+set listchars=eol:¶,tab:>·,trail:~,extends:>,precedes:<,space:␣
+
+" Toggle listchars
+nmap <F5> :set list!<CR>
+
+" Use primary clipboard
+set clipboard=unnamed
+
+" Set tex flavor
+let g:tex_flavor = "latex"
+
+" Easy motion use leader key only once
+map <Leader> <Plug>(easymotion-prefix)
+
+" YCM options
+let g:ycm_clangd_args = ['--compile-commands-dir=./build']
+
+" ALE options
+let g:ale_cpp_clang_options = '-Wall -O2 -std=c++1z'
+let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
+let g:ale_sign_error = '✗'
+let g:ale_sign_info = 'i'
+let g:ale_sign_warning = '⚡'
+let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
+let g:ale_linters = {'c': ['clang'], 'cpp': ['clangd']}
+let g:airline#extensions#ale#enabled = 1
+let b:ale_fixers = {'cpp': ['clang-format']}
