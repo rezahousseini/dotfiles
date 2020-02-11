@@ -63,6 +63,12 @@ ZSH_TMUX_AUTOSTART=true
 # Add meson and powerline binary to path
 export PATH="$HOME/.local/bin:$PATH"
 
+# Set fzf installation directory path
+#export FZF_BASE=$HOME/.fzf
+
+# Uncomment the following line to disable key bindings (CTRL-T, CTRL-R, ALT-C)
+#export DISABLE_FZF_KEY_BINDINGS="true"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -73,11 +79,14 @@ plugins=(
   poetry
   tmux
   z
+  #fzf
   zsh-autosuggestions
   zsh-syntax-highlighting
   colored-man-pages
   gitignore
   git-prompt
+  autoupdate
+  zsh-dircolors-solarized
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -119,3 +128,5 @@ export PATH=$HOME/.poetry/bin:$PATH
 if (( $+commands[keychain] )) then
   eval $(keychain --eval id_rsa_mecos)
 fi
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
