@@ -4,6 +4,10 @@ Install dependencies
 
     sudo apt install git curl zsh stow tmux fonts-powerline neovim
     pip install --user powerline-status
+
+Install the tmux plugin manager
+	
+		git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     
 Activate oh-my-zsh
 
