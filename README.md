@@ -3,6 +3,9 @@
 Install dependencies
 
     sudo apt install git curl zsh stow tmux fonts-powerline neovim
+
+Install the powerline status bar
+
     pip install --user powerline-status
 
 Install the tmux plugin manager
@@ -33,7 +36,7 @@ Remove or move any existing files
 
 Setup the dotfiles by calling
 
-    stow git vim zsh tmux 
+    stow git vim zsh tmux powerline
  
  on a linux system or
  
