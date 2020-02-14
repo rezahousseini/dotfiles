@@ -78,8 +78,8 @@ plugins=(
   git
   poetry
   tmux
-  z
-  #fzf
+  #z
+  fzf
   zsh-autosuggestions
   zsh-syntax-highlighting
   colored-man-pages
@@ -130,3 +130,11 @@ if (( $+commands[keychain] )) then
 fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+if [[ -n "$GUIX_ENVIRONMENT" ]]; then
+  GUIX_PROMPT="%F{8}[%F{3}guix-shell%F{8}]%f"
+  PROMPT="$GUIX_PROMPT $PROMPT"
+fi
+
+# guix locale path
+export GUIX_LOCPATH="$HOME/.guix-profile/lib/locale"
