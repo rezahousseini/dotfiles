@@ -2,7 +2,7 @@
 
 Install dependencies
 
-    sudo apt install git curl zsh stow tmux fonts-powerline neovim
+    sudo apt install git curl zsh stow tmux fonts-powerline neovim astyle
 
 Install the powerline status bar
 
@@ -36,7 +36,7 @@ Remove or move any existing files
 
 Setup the dotfiles by calling
 
-    stow git vim zsh tmux powerline
+    stow git vim zsh tmux powerline astyle
  
  on a linux system or
  
