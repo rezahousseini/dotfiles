@@ -159,3 +159,6 @@ let g:ale_statusline_format = ['✗ %d', '⚡ %d', '✔ OK']
 let g:ale_linters = {'c': ['clang'], 'cpp': ['clangd']}
 let g:airline#extensions#ale#enabled = 1
 let b:ale_fixers = {'cpp': ['clang-format']}
+
+" Vimtex options
+let g:vimtex_compiler_engine = 'lualatex'
