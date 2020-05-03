@@ -52,6 +52,9 @@ Plug 'easymotion/vim-easymotion'
 " YouCompleteMe
 Plug 'ycm-core/YouCompleteMe'
 
+" Meson syntax highlight
+Plug 'stfl/meson.vim'
+
 call plug#end()
 
 "Completion
