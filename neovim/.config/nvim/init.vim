@@ -9,8 +9,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Linting
-Plug 'neomake/neomake'
-Plug 'w0rp/ale'
+" Plug 'neomake/neomake'
+Plug 'dense-analysis/ale'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -97,7 +97,7 @@ set clipboard+=unnamedplus
 " Neomake config
 " Full config: when writing or reading a buffer, and on changes in insert and
 " normal mode (after 1s; no delay when writing).
-call neomake#configure#automake('nrwi', 500)
+" call neomake#configure#automake('nrwi', 500)
 
 " Airline theme
 let g:airline#extensions#tabline#enabled = 1
@@ -121,6 +121,9 @@ let g:solarized_termcolors=256
 set background=dark
 colorscheme solarized
 
+" hack for gitgutter greyish background
+highlight clear SignColumn
+
 " Toggle tagbar
 nmap <F4> :TagbarToggle<CR>
 
@@ -128,11 +131,11 @@ nmap <F4> :TagbarToggle<CR>
 nmap <F3> :NERDTreeToggle<CR>
 
 " Change vimdiff colorscheme
-if &diff
-  colorscheme github
-  "colorscheme molokai
-  "colorscheme evening
-endif
+"if &diff
+"  colorscheme github
+"  "colorscheme molokai
+"  "colorscheme evening
+"endif
 
 "Show line endings
 set listchars=eol:¶,tab:>·,trail:~,extends:>,precedes:<,space:␣
@@ -153,8 +156,13 @@ map <Leader> <Plug>(easymotion-prefix)
 let g:ycm_clangd_args = ['--compile-commands-dir=./build']
 
 " ALE options
-let g:ale_cpp_clang_options = '-Wall -O2 -std=c++1z'
-let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
+let g:ale_cpp_clangd_options = '--compile-commands-dir=./build -std=c++17 -Wall -Wextra'
+let g:ale_c_build_dir_names = ['build']
+let g:ale_c_build_dir = './build'
+let g:ale_c_parse_compile_commands = 1
+let g:ale_c_parse_makefile = 0
+" let g:ale_cpp_clang_options = '-Wall -O2 -std=c++1z'
+" let g:ale_cpp_gcc_options = '-Wall -O2 -std=c++1z'
 let g:ale_sign_error = '✗'
 let g:ale_sign_info = 'i'
 let g:ale_sign_warning = '⚡'
@@ -165,3 +173,7 @@ let b:ale_fixers = {'cpp': ['clang-format']}
 
 " Vimtex options
 let g:vimtex_compiler_engine = 'lualatex'
+
+" Color column 80
+highlight ColorColumn ctermbg=DarkGray
+call matchadd('ColorColumn', '\%81v', 100) "set column nr
