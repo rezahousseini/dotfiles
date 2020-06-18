@@ -9,7 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
 " Linting
-" Plug 'neomake/neomake'
+Plug 'neomake/neomake'
 Plug 'dense-analysis/ale'
 
 " Snippets
