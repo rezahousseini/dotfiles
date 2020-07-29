@@ -55,6 +55,14 @@ Plug 'ycm-core/YouCompleteMe'
 " Meson syntax highlight
 Plug 'stfl/meson.vim'
 
+" incsearch
+Plug 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch-easymotion.vim'
+
+" clang-format
+Plug 'kana/vim-operator-user'
+Plug 'rhysd/vim-clang-format'
+
 call plug#end()
 
 "Completion
@@ -149,6 +157,9 @@ set clipboard=unnamed
 " Set tex flavor
 let g:tex_flavor = "latex"
 
+" Remap Leader key to tab
+:let mapleader = "\<Tab>"
+
 " Easy motion use leader key only once
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -177,3 +188,17 @@ let g:vimtex_compiler_engine = 'lualatex'
 " Color column 80
 highlight ColorColumn ctermbg=DarkGray
 call matchadd('ColorColumn', '\%81v', 100) "set column nr
+
+" incsearch mapping
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" incsearch easymotion mapping
+map z/ <Plug>(incsearch-easymotion-/)
+map z? <Plug>(incsearch-easymotion-?)
+map zg/ <Plug>(incsearch-easymotion-stay)
+
+" clang-format options
+map <C-K> <Plug>(operator-clang-format) 
+let g:clang_format#detect_style_file = 1
