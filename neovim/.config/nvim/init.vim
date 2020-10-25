@@ -190,7 +190,7 @@ highlight ColorColumn ctermbg=DarkGray
 call matchadd('ColorColumn', '\%81v', 100) "set column nr
 
 " incsearch mapping
-map /  <Plug>(incsearch-forward)
+"map /  <Plug>(incsearch-forward)
 map ?  <Plug>(incsearch-backward)
 map g/ <Plug>(incsearch-stay)
 
