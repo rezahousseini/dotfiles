@@ -63,6 +63,9 @@ Plug 'haya14busa/incsearch-easymotion.vim'
 Plug 'kana/vim-operator-user'
 Plug 'rhysd/vim-clang-format'
 
+" Unicode search
+Plug 'chrisbra/unicode.vim'
+
 call plug#end()
 
 "Completion
